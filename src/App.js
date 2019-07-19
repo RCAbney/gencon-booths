@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 const data = [
@@ -159,44 +159,53 @@ const data = [
 ];
 
 const App = () => {
-  const [tableData, setTableData] = useState([...data]);
+  const [tableData, setTableData] = useState(
+    JSON.parse(localStorage.getItem("tableDataInLocalStorage")) || [...data]
+  );
+
+  useEffect(() => {
+    localStorage.setItem("tableDataInLocalStorage", JSON.stringify(tableData));
+  }, [tableData]);
 
   const handleClick = e => {
     e.preventDefault();
     const index = e.target.id;
     tableData[index].visited = !tableData[index].visited;
     setTableData([...tableData]);
-    console.log(tableData);
   };
 
   return (
     <>
       <h1>Gencon Games & Booths</h1>
       <table className="table">
-        <tr>
-          <th scope="col">Booth #</th>
-          <th scope="col">Publisher</th>
-          <th scope="col">Game</th>
-          <th scope="col">Visited this booth</th>
-        </tr>
-        {tableData
-          .sort((a, b) => a.booth - b.booth)
-          .map((game, i) => (
-            <tr key={game.id} className={game.visited ? "visited" : ""}>
-              <td>{game.booth}</td>
-              <td>{game.publisher}</td>
-              <td>{game.title}</td>
-              <td>
-                <button
-                  id={i}
-                  className="btn btn-primary"
-                  onClick={handleClick}
-                >
-                  Visited
-                </button>
-              </td>
-            </tr>
-          ))}
+        <thead>
+          <tr>
+            <th scope="col">Booth #</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Game</th>
+            <th scope="col">Visited this booth</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableData
+            .sort((a, b) => a.booth - b.booth)
+            .map((game, i) => (
+              <tr key={game.id} className={game.visited ? "visited" : ""}>
+                <td>{game.booth}</td>
+                <td>{game.publisher}</td>
+                <td>{game.title}</td>
+                <td>
+                  <button
+                    id={i}
+                    className="btn btn-primary"
+                    onClick={handleClick}
+                  >
+                    Visited
+                  </button>
+                </td>
+              </tr>
+            ))}
+        </tbody>
       </table>
     </>
   );
