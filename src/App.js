@@ -155,6 +155,12 @@ const data = [
     title: "IT: Evil Below",
     booth: 137,
     visited: false
+  },
+  {
+    id: 22,
+    publisher: "The Broken Token",
+    booth: 2845,
+    visited: false
   }
 ];
 
@@ -162,6 +168,8 @@ const App = () => {
   const [tableData, setTableData] = useState(
     JSON.parse(localStorage.getItem("tableDataInLocalStorage")) || [...data]
   );
+
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("tableDataInLocalStorage", JSON.stringify(tableData));
@@ -174,9 +182,15 @@ const App = () => {
     setTableData([...tableData]);
   };
 
+  const handleToggle = e => {
+    e.preventDefault();
+    setToggle(!toggle);
+  }
+
   return (
     <>
       <h1>Gencon Games & Booths</h1>
+      <button className="btn btn-primary mb-3" onClick={handleToggle}>{toggle ? "Show" : "Hide"} Visited Booths</button>
       <table className="table">
         <thead>
           <tr>
@@ -190,7 +204,7 @@ const App = () => {
           {tableData
             .sort((a, b) => a.booth - b.booth)
             .map((game, i) => (
-              <tr key={game.id} className={game.visited ? "visited" : ""}>
+              <tr key={game.id} className={game.visited ? "visited" : ""} id={game.visited && toggle ? "hideMe" : "showMe"}>
                 <td>{game.booth}</td>
                 <td>{game.publisher}</td>
                 <td>{game.title}</td>
