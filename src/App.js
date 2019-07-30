@@ -159,6 +159,7 @@ const data = [
   {
     id: 22,
     publisher: "The Broken Token",
+    title: "Gloomhaven Xpac organizer",
     booth: 2845,
     visited: false
   }
