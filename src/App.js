@@ -4,165 +4,130 @@ import "./App.css";
 const data = [
   {
     id: 0,
-    publisher: "AEG",
-    title: "Captain is Dead: Dangerous Planet",
-    booth: 701,
+    publisher: "25th Century",
+    title: "On the Rocks",
+    booth: 2455,
     visited: false
   },
   {
     id: 1,
-    publisher: "B&B",
-    title: "The Refuge: Terror From the Deep",
-    booth: 275,
+    publisher: "AEG",
+    title: "Whirling Witchcraft",
+    booth: "Not listed",
     visited: false
   },
   {
     id: 2,
-    publisher: "Blue Orange Games",
-    title: "Planet",
-    booth: 1813,
+    publisher: "ARES Games",
+    title: "Last Friday (2nd)",
+    booth: 521,
     visited: false
   },
   {
     id: 3,
-    publisher: "Board & Dice",
-    title: "Teotihuacan Expansion",
-    booth: 2535,
+    publisher: "ARES Games",
+    title: "Masters of the Night",
+    booth: 521,
     visited: false
   },
   {
     id: 4,
-    publisher: "Capstone Games",
-    title: "Watergate",
-    booth: 457,
+    publisher: "ARES Games",
+    title: "Sword and Sorcery",
+    booth: 521,
     visited: false
   },
   {
     id: 5,
-    publisher: "CMON",
-    title: "God of War",
-    booth: 417,
+    publisher: "Asmadi",
+    title: "Good Puppers",
+    booth: 1429,
     visited: false
   },
   {
     id: 6,
-    publisher: "CMON",
-    title: "Zombicide Invader",
-    booth: 417,
+    publisher: "Bezier Games",
+    title: "Suburbia",
+    booth: "Not listed",
     visited: false
   },
   {
     id: 7,
-    publisher: "Czech Games",
-    title: "Sanctum",
-    booth: 237,
+    publisher: "Bezier Games",
+    title: "Suburbia",
+    booth: "Not listed",
     visited: false
   },
   {
     id: 8,
-    publisher: "Deep Water Games",
-    title: "Floor Plan",
-    booth: 471,
+    publisher: "Capstone Games",
+    title: "Juicy Fruits",
+    booth: 731,
     visited: false
   },
   {
     id: 9,
-    publisher: "Deep Water Games",
-    title: "Welcome To (Solo)",
-    booth: 471,
+    publisher: "Eggertspiele",
+    title: "Great Wester Trail 2nd Ed",
+    booth: 2019,
     visited: false
   },
   {
     id: 10,
-    publisher: "Everything Epic Games",
-    title: "Grind House",
-    booth: 2819,
-    visited: false
-  },
-  {
-    id: 11,
-    publisher: "Heidelbar Games",
-    title: "Wordsmith",
-    booth: 1819,
-    visited: false
-  },
-  {
-    id: 12,
-    publisher: "Indie Board and Cards",
-    title: "Aeon's End: New Age",
-    booth: 2447,
-    visited: false
-  },
-  {
-    id: 13,
-    publisher: "Mythic Games",
-    title: "Super Fantasy Brawl",
-    booth: 2805,
-    visited: false
-  },
-  {
-    id: 14,
-    publisher: "Penguin & Panda",
-    title: "Onimaru",
-    booth: 329,
-    visited: false
-  },
-  {
-    id: 15,
-    publisher: "Plaid Hat Games",
-    title: "Super Punch Fighter",
-    booth: 823,
-    visited: false
-  },
-  {
-    id: 16,
-    publisher: "Ravensberger",
-    title: "Jaws",
+    publisher: "Forbidden Games",
+    title: "Dungeon Party",
     booth: 2111,
     visited: false
   },
   {
+    id: 11,
+    publisher: "Nuts (Ares)",
+    title: "Mini Rogue",
+    booth: 521,
+    visited: false
+  },
+  {
+    id: 12,
+    publisher: "Pandasaurus",
+    title: "Dino Island Rawr n Write",
+    booth: 1219,
+    visited: false
+  },
+  {
+    id: 13,
+    publisher: "PSC",
+    title: "Caesar + Blitzkrieg",
+    booth: 2458,
+    visited: false
+  },
+  {
+    id: 14,
+    publisher: "Renegade",
+    title: "Clank! In! Space! Expansion",
+    booth: 1803,
+    visited: false
+  },
+  {
+    id: 15,
+    publisher: "Renegade",
+    title: "Dead Men Tell No Takes 3rd Ed",
+    booth: 1803,
+    visited: false
+  },
+  {
+    id: 16,
+    publisher: "Restoration Games",
+    title: "Dark Tower",
+    booth: 929,
+    visited: false
+  },
+  {
     id: 17,
-    publisher: "Renegade Games",
-    title: "Clank! Stuffs",
-    booth: 2201,
+    publisher: "WizKids!",
+    title: "Super Skill Pinball",
+    booth: 309,
     visited: false
   },
-  {
-    id: 18,
-    publisher: "Renegade Games",
-    title: "Terror Below (Tremors)",
-    booth: 2201,
-    visited: false
-  },
-  {
-    id: 19,
-    publisher: "Steve Jackson Games",
-    title: "Deadly Doodles",
-    booth: 1401,
-    visited: false
-  },
-  {
-    id: 20,
-    publisher: "The OP",
-    title: "Die Hard: Nakatomi Plaza",
-    booth: 137,
-    visited: false
-  },
-  {
-    id: 21,
-    publisher: "The OP",
-    title: "IT: Evil Below",
-    booth: 137,
-    visited: false
-  },
-  {
-    id: 22,
-    publisher: "The Broken Token",
-    title: "Gloomhaven Xpac organizer",
-    booth: 2845,
-    visited: false
-  }
 ];
 
 const App = () => {
